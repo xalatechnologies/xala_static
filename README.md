@@ -1,0 +1,1 @@
+# xala_static
