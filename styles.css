@@ -1,0 +1,276 @@
+/* Font-Face Rules for Acumin Pro */
+@font-face {
+    font-family: 'Acumin Pro';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Acumin Pro'), url('fonts/Acumin-RPro.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Acumin Pro Italic';
+    font-style: italic;
+    font-weight: normal;
+    src: local('Acumin Pro Italic'), url('fonts/Acumin-ItPro.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Acumin Pro Bold';
+    font-style: normal;
+    font-weight: bold;
+    src: local('Acumin Pro Bold'), url('fonts/Acumin-BdPro.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Acumin Pro Bold Italic';
+    font-style: italic;
+    font-weight: bold;
+    src: local('Acumin Pro Bold Italic'), url('fonts/Acumin-BdItPro.woff') format('woff');
+}
+
+/* Apply Acumin Pro as default font for the body */
+body {
+    font-family: 'Acumin Pro', Arial, sans-serif;
+}
+
+/* Headings use Bold */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Acumin Pro Bold', Arial, sans-serif;
+}
+
+h4 {
+    color: var(--Blue-Gray-100, #282930);
+    font-family: "Acumin Pro";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+    /* 36px */
+}
+
+/* Italic usage for special text */
+i,
+em {
+    font-family: 'Acumin Pro Italic', Arial, sans-serif;
+}
+
+/* Bold Italic for specific usage */
+strong em,
+strong i {
+    font-family: 'Acumin Pro Bold Italic', Arial, sans-serif;
+}
+
+/* Primary color (custom green) */
+:root {
+    --primary-green: #24df7b;
+}
+
+/* Custom Badge Color */
+.bg-light-green {
+    background-color: var(--primary-green);
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+/* Text Color Highlight */
+.highlight-green {
+    color: var(--primary-green);
+}
+
+/* Primary Button Style */
+.btn-primary-custom {
+    background-color: var(--primary-green);
+    color: white;
+    border-radius: 25px;
+    border: none;
+    font-family: 'Acumin Pro Bold', Arial, sans-serif;
+}
+
+.btn-primary-custom:hover {
+    background-color: #1fbe66;
+}
+
+.btn-outline-primary-custom {
+    color: var(--primary-green);
+    border: 2px solid var(--primary-green);
+    border-radius: 25px;
+    font-family: 'Acumin Pro', Arial, sans-serif;
+}
+
+.btn-outline-primary-custom:hover {
+    background-color: var(--primary-green);
+    color: white;
+}
+
+/* Stats Overlay */
+.stat-overlay {
+    top: 10px;
+    left: 10px;
+    font-size: 0.85rem;
+    font-family: 'Acumin Pro Bold', Arial, sans-serif;
+}
+
+/* Green Icon and Text */
+.text-primary-custom {
+    color: var(--primary-green);
+    font-family: 'Acumin Pro Bold', Arial, sans-serif;
+}
+
+.text-primary-custom i {
+    font-size: 1.5rem;
+}
+
+.hero-section {
+    background: #F5FFFA;
+}
+
+.hero-content {
+    display: flex;
+    padding-right: 12.967px;
+    align-items: center;
+}
+
+.hero-content-left {
+    display: flex;
+    height: 700px;
+    padding: 16px 0px 24px 0px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.hero-content-right {
+    display: flex;
+    padding-right: 12.967px;
+    align-items: center;
+    position: absolute;
+    right: 50.849px;
+    top: 230px;
+}
+
+.hero-satisfaction {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+.hero-satisfaction p {
+    color: #4E5050;
+    font-family: "Acumin Pro";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    width: 261px;
+}
+
+.cta-button {
+    border-radius: 100px;
+    display: flex;
+    padding: 12px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    font-family: "Acumin Pro";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+}
+
+.cta-button-primary {
+    background: #00B25C;
+    color: var(--Neutral-10, #FFF);
+}
+
+.cta-button-default {
+    border-radius: 100px;
+    border: 1px solid #00B25C;
+    color: #00B25C;
+}
+
+.cta-button-primary:hover {
+    background: #FFFFFF;
+    border: 1px solid #00B25C;
+    color: #00B25C;
+}
+
+.cta-button-default:hover {
+    background: #00B25C;
+    color: var(--Neutral-10, #FFF);
+    border: 1px solid #00B25C;
+}
+
+/* Images */
+img {
+    border-radius: 10px;
+}
+
+/* Consistent Logo Size */
+.logo {
+    max-height: 50px;
+    width: auto;
+}
+
+/* Badge using primary custom green */
+.badge {
+    border-radius: 20px;
+    border: 1px solid #00B25C;
+    background: #DEF8EC;
+    display: flex;
+    width: 181px;
+    padding: 8px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    color: #00B25C;
+
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 121%;
+    /* 21.78px */
+}
+
+.badge span {
+    height: 17px;
+}
+
+.hero-title {
+    color: #333;
+    font-family: "Acumin Pro";
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.it-solutions {
+    background: linear-gradient(94deg, #00B25C 15.63%, #82E078 98.08%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: "Acumin Pro";
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+/* Consistent overlay styling */
+.stat-overlay {
+    top: 10px;
+    left: 10px;
+}
+
+/* Footer styles */
+footer {
+    background-color: #222;
+}
