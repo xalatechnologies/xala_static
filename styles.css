@@ -287,6 +287,22 @@ footer {
     background: #F5F5F5;
     position: relative;
     overflow: hidden;
+    z-index: 1;
+}
+
+.services-section::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-image: url('./uploads/media/Vector.png'); /* Replace with the correct path to the SVG */
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 500px;
+    height: 100%;
+    z-index: 1; /* Lower z-index to ensure it is behind the cards */
+    opacity: 0.5; /* Optional: adjust opacity for a lighter effect */
+    pointer-events: none; /* Ensures it doesn't interfere with clicks */
 }
 
 .background-design {
@@ -327,6 +343,7 @@ footer {
     /* Ensures content is distributed */
     height: 100%;
     /* Ensures all cards take up full height */
+    z-index: 2;
 }
 
 .service-card:hover {
@@ -865,6 +882,7 @@ footer {
     justify-content: space-between;
     height: 100%;
     position: relative;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Shadow effect for form */
 }
 
 .contact-info-header {
