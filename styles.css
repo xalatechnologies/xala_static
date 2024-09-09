@@ -26,6 +26,30 @@ em {
     font-family: 'Acumin Pro Italic', Arial, sans-serif;
 }
 
+.bg-dark-green {
+    background: #00B25C;
+}
+
+.bg-green {
+    background: #82E078;
+}
+
+.bg-light-green {
+    background: #f9fdf7;
+}
+
+.bg-grey {
+    background: #F0F1F2;
+}
+
+.bg-white {
+    background: #FFFF;
+}
+
+.bg-black {
+    background: #1E1E1E;
+}
+
 /* Primary color (custom green) */
 :root {
     --primary-green: #24df7b;
@@ -33,7 +57,6 @@ em {
 
 /* Responsive Hero Section */
 .hero-section {
-    background: #F5FFFA;
     padding: 60px 0;
     /* Add padding for spacing */
 }
@@ -261,7 +284,7 @@ footer {
 
 /* Services Section */
 .services-section {
-    background-color: #f9fdf7;
+    background: #F5F5F5;
     position: relative;
     overflow: hidden;
 }
@@ -294,13 +317,16 @@ footer {
 .service-card {
     background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 15px 30px 0px #4767880F;
+    box-shadow: 0px 8px 15px 0px #47678808;
     text-align: center;
     transition: transform 0.3s ease-in-out;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Ensures content is distributed */
-    height: 100%; /* Ensures all cards take up full height */
+    justify-content: space-between;
+    /* Ensures content is distributed */
+    height: 100%;
+    /* Ensures all cards take up full height */
 }
 
 .service-card:hover {
@@ -380,5 +406,660 @@ footer {
 
     .service-icon {
         font-size: 1.8rem;
+    }
+}
+
+/* Work Section */
+.work-section {
+    padding: 60px 0;
+    background-color: #f9fdf7;
+}
+
+/* Badge on its own line */
+.badge-tag {
+    background-color: #DEF8EC;
+    color: #00B25C;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+/* Title and Arrows on the next line */
+.work-title {
+    font-family: 'Acumin Pro Bold', Arial, sans-serif;
+    font-size: 2.5rem;
+    color: #333;
+    margin-right: 20px;
+}
+
+/* Pagination Arrows */
+.btn-slider {
+    background: #00B25C;
+    color: white;
+    border: none;
+}
+
+.btn-slider:hover {
+    background: white;
+    color: #00B25C;
+    border: 1px solid #00B25C;
+}
+
+/* Project Cards */
+.project-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: visible;
+    /* Ensure the content can overflow */
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+    height: 300px;
+    padding-bottom: 60px;
+    /* To create space below for content overlap */
+}
+
+.project-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+}
+
+/* Floating Project Content (overlapping half on image, half outside) */
+.project-content {
+    position: absolute;
+    bottom: -30px;
+    /* Move the content out of the image */
+    left: 35px;
+    width: calc(100% - 60px);
+    /* Maintain some padding */
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+    /* Drop shadow for lifted effect */
+    z-index: 2;
+    /* Ensure project content is in front of the image */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transform: translateY(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.project-title {
+    font-family: 'Acumin Pro', Arial, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.project-tags {
+    margin-top: 10px;
+}
+
+.project-tags .tag {
+    background-color: #f0f0f0;
+    color: #666;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    margin-right: 5px;
+    padding: 5px 10px;
+}
+
+/* Arrow Link */
+.arrow-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    /* Control the size of the arrow */
+    color: #24df7b;
+    /* Green color for the arrow */
+    border: 2px solid #e0e0e0;
+    /* Thicker border for better visibility */
+    padding: 8px;
+    /* Adjust padding for better spacing */
+    border-radius: 50%;
+    /* Circular shape */
+    width: 40px;
+    /* Set fixed width and height for consistent size */
+    height: 40px;
+    transition: all 0.3s ease-in-out;
+}
+
+.arrow-link:hover {
+    background: #00B25C;
+    color: white;
+    border: 1px solid #00B25C;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .work-title {
+        font-size: 2rem;
+    }
+
+    .project-content {
+        bottom: 0;
+        width: 70%;
+        transform: translateY(10%);
+    }
+}
+
+@media (max-width: 576px) {
+    .work-title {
+        font-size: 1.8rem;
+    }
+
+    .project-content {
+        bottom: 0;
+        width: 80%;
+        transform: translateY(5%);
+    }
+}
+
+/* Tools Section */
+.tools-section {
+    padding: 60px 0;
+    background-color: #F5F5F5;
+}
+
+.tools-title {
+    font-family: 'Acumin Pro Bold', Arial, sans-serif;
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.tools-subtitle {
+    font-size: 1.1rem;
+    color: #666;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+/* Tools Grid */
+.tools-grid .tool-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for card */
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.tools-grid .tool-card:hover {
+    transform: translateY(-10px); /* Lift on hover */
+}
+
+/* Tool Logo inside card */
+.tools-grid .tool-logo {
+    max-width: 60px; /* Adjust the size as needed */
+    height: auto;
+    display: block;
+    margin: 0 auto 10px auto; /* Center the logo and add bottom margin */
+}
+
+/* Tool Label */
+.tools-grid .tool-label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #333;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .tools-title {
+        font-size: 2rem;
+    }
+
+    .tool-card {
+        padding: 15px; /* Slightly reduce padding for smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .tools-title {
+        font-size: 1.8rem;
+    }
+
+    .tool-logo {
+        max-width: 50px; /* Slightly smaller logos for mobile screens */
+    }
+}
+
+/* Work Process Section */
+.work-process-section {
+    background-color: #f9fdf7;
+    padding: 60px 0;
+}
+
+.process-title {
+    font-family: 'Acumin Pro Bold', Arial, sans-serif;
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.process-subtitle {
+    font-size: 1.1rem;
+    color: #666;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+/* Process Steps */
+.process-step {
+    text-align: center;
+}
+
+.step-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #24df7b;
+    color: white;
+    font-size: 1.5rem;
+    line-height: 50px;
+    margin: 0 auto 15px auto;
+    font-weight: 700;
+}
+
+.step-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.step-description {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Process Arrows */
+.process-arrow {
+    font-size: 2rem;
+    color: #ccc;
+}
+
+.btn-primary-custom {
+    background-color: #24df7b;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn-primary-custom:hover {
+    background-color: #1fbe66;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .process-title {
+        font-size: 2rem;
+    }
+
+    .step-circle {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 1.2rem;
+    }
+
+    .process-arrow {
+        display: none; /* Hide arrows on smaller screens */
+    }
+}
+
+/* Agile Process Section */
+.agile-process-section {
+    padding: 60px 0;
+}
+
+.agile-process-title {
+    font-family: 'Acumin Pro Bold', Arial, sans-serif;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+/* Agile Steps */
+.agile-steps {
+    position: relative;
+    margin-top: 40px;
+}
+
+/* Individual Step */
+.agile-step {
+    position: relative;
+    z-index: 1;
+    padding-top: 20px;
+}
+
+.step-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    color: white;
+    font-size: 1.5rem;
+    line-height: 80px;
+    margin: 0 auto 10px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #28a745;
+}
+
+/* Step Title */
+.step-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Step Description */
+.step-description {
+    font-size: 1rem;
+    color: #555;
+    font-weight: 500;
+    margin: 0;
+    max-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Process Arrow */
+.process-arrow {
+    font-size: 2rem;
+    color: #ccc;
+    vertical-align: middle;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .step-circle {
+        width: 60px;
+        height: 60px;
+        font-size: 1.2rem;
+        line-height: 60px;
+    }
+
+    .process-arrow {
+        font-size: 1.5rem;
+    }
+
+    .step-title {
+        font-size: 1rem;
+    }
+
+    .step-description {
+        font-size: 0.9rem;
+        max-width: 150px;
+    }
+
+    /* On smaller screens, hide the arrows */
+    .d-none.d-md-block {
+        display: none;
+    }
+}
+
+/* Contact Us Section */
+.contact-us-section {
+    padding: 60px 0;
+}
+
+.contact-title {
+    font-family: 'Acumin Pro Bold', Arial, sans-serif;
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.contact-subtitle {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+/* Parent container to ensure both columns stretch equally */
+.contact-us-section .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Contact Form */
+.contact-form .form-control {
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    padding: 10px 15px;
+    font-size: 1rem;
+}
+
+/* Contact Form */
+.contact-form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Shadow effect for form */
+    height: 100%;
+}
+
+
+/* Contact Information */
+.contact-info {
+    color: white;
+    border-radius: 8px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    position: relative;
+}
+
+.contact-info-header {
+    margin-bottom: 30px;
+}
+
+.contact-info-header h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.contact-info-header p {
+    font-size: 1rem;
+}
+
+.contact-info-labels {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.contact-info-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.contact-details {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-details li {
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.contact-details i {
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.social-icons a {
+    margin-right: 15px;
+    color: white;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #ddd;
+}
+
+.contact-info::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: -60px;
+    background-image: url('./uploads/media/Looper-1.svg'); /* Replace with the correct path to the SVG */
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 372px;
+    height: 354px;
+    opacity: 1; /* Adjust opacity if needed */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .contact-info {
+        margin-top: 30px;
+        padding: 20px;
+    }
+
+    .contact-info::after {
+        display: none;
+    }
+
+    .contact-us-section .row {
+        flex-direction: column;
+    }
+}
+
+/* Footer Section */
+.footer-section {
+    padding: 50px 0;
+    color: #fff;
+}
+
+.footer-logo img {
+    max-width: 80px;
+    margin-bottom: 20px;
+}
+
+.footer-description {
+    font-size: 14px;
+    color: #ddd;
+}
+
+.footer-description a {
+    color: #24df7b;
+    text-decoration: none;
+}
+
+.footer-description a:hover {
+    text-decoration: underline;
+}
+
+/* Contact Info */
+.footer-contact .contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.footer-contact i {
+    font-size: 24px;
+    color: #24df7b;
+    margin-right: 10px;
+}
+
+.footer-contact span {
+    display: block;
+    font-size: 14px;
+    color: #fff;
+}
+
+.footer-contact p {
+    font-size: 16px;
+    margin: 0;
+}
+
+/* Social Links */
+.footer-social p {
+    font-size: 14px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.footer-social a {
+    color: #24df7b;
+    margin-right: 10px;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.footer-social a:hover {
+    color: #ddd;
+}
+
+/* Footer Bottom Links */
+.footer-bottom {
+    border-top: 1px solid #444;
+    padding-top: 20px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links li {
+    display: inline;
+}
+
+.footer-links a {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-copyright {
+    font-size: 14px;
+    color: #ddd;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links {
+        margin-bottom: 20px;
     }
 }
